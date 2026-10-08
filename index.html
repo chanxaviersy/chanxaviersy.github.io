@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xavier Chen — Data & AI Portfolio</title>
+  <meta name="description" content="数据分析师 / AI 应用开发工程师 · 寻求 2026 全职机会 · 深圳 / 香港">
+  <meta name="author" content="Xavier Chen">
+  <meta name="keywords" content="Data Analyst, AI Engineer, Python, SQL, PyTorch, 深圳, 香港">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Xavier Chen — Data & AI Portfolio">
+  <meta property="og:description" content="数据分析师 / AI 应用开发工程师 · 寻求 2026 全职机会">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chanxaviersy.github.io">
+  <meta property="og:locale" content="zh_CN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Xavier Chen — Data & AI Portfolio">
+  <meta name="twitter:description" content="数据分析师 / AI 应用开发工程师">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E📊%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+  <!-- ============== 顶部 HERO ============== -->
+  <header class="hero">
+    <div class="hero-bg">
+      <div class="gradient-orb orb-1"></div>
+      <div class="gradient-orb orb-2"></div>
+      <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <nav class="nav">
+      <a href="#about" class="nav-link">关于</a>
+      <a href="#projects" class="nav-link">项目</a>
+      <a href="#skills" class="nav-link">技术</a>
+      <a href="#highlights" class="nav-link">亮点</a>
+      <a href="#contact" class="nav-link">联系</a>
+    </nav>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="status-dot"></span>
+        <span>Open to opportunities · 2026 Q1 / Q2</span>
+      </div>
+
+      <h1 class="hero-title">
+        Hi, I'm <span class="gradient-text">Xavier Chen</span> 👋
+      </h1>
+
+      <p class="hero-subtitle">
+        <span class="typing-text" id="typing"></span>
+      </p>
+
+      <p class="hero-description">
+        3+ 年数据分析与 AI 工程实战经验 · 端到端从数据到产品 · 业务敏感 + 技术落地
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-number" data-target="3">0</div>
+          <div class="stat-label">年实战经验</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number" data-target="5">0</div>
+          <div class="stat-label">开源项目</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number" data-target="10">0</div>
+          <div class="stat-suffix">M+</div>
+          <div class="stat-label">处理数据规模</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number" data-target="40">0</div>
+          <div class="stat-suffix">%+</div>
+          <div class="stat-label">性能优化提升</div>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <span>查看项目</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="mailto:chanxaviersy@gmail.com?subject=Hello%20from%20Portfolio" class="btn btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>邮件联系</span>
+        </a>
+        <a href="https://github.com/chanxaviersy" target="_blank" rel="noopener" class="btn btn-ghost">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-indicator" aria-label="Scroll to content">
+      <span></span>
+    </a>
+  </header>
+
+  <main class="container">
+
+    <!-- ============== 关于我 ============== -->
+    <section id="about" class="section">
+      <div class="section-header">
+        <span class="section-tag">01</span>
+        <h2>关于我</h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="lead">
+            我是 <strong>Xavier Chen</strong>，数据分析师 &amp; AI 应用开发工程师，base <span class="highlight">深圳 / 香港</span>。
+          </p>
+          <p>
+            计算机科学 / 数据科学背景，3+ 年数据分析与 AI 工程实战经验。
+            曾在 <strong>Insta360（影石创新）</strong> 任 Data Analyst，处理千万级用户行为数据；
+            深度学习方向自驱学习，落地 LSTM 时序预测、CNN+LSTM 行为识别等端到端项目。
+          </p>
+          <p>
+            业务侧深耕：电商转化分析、财务月报、用户增长漏斗等数据产品建设。
+            中英文工作流，可接受出差与远程协作。
+          </p>
+          <p>
+            <strong>2026 年</strong> 寻求<strong>全职</strong>数据 / AI 相关岗位，期待与志同道合的团队一起创造价值 🚀
+          </p>
+        </div>
+
+        <div class="about-cards">
+          <div class="info-card">
+            <div class="info-icon">🎓</div>
+            <div class="info-label">教育背景</div>
+            <div class="info-value">CS / DS</div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">💼</div>
+            <div class="info-label">最近公司</div>
+            <div class="info-value">Insta360</div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">🌏</div>
+            <div class="info-label">工作地点</div>
+            <div class="info-value">深圳 / 香港</div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">⏰</div>
+            <div class="info-label">可到岗</div>
+            <div class="info-value">2026 Q1 / Q2</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== 技术栈 ============== -->
+    <section id="skills" class="section">
+      <div class="section-header">
+        <span class="section-tag">02</span>
+        <h2>技术栈</h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="skill-header">
+            <span class="skill-icon">🐍</span>
+            <h3>编程语言</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag-primary">Python</span>
+            <span class="tag">SQL</span>
+            <span class="tag">R</span>
+            <span class="tag">Shell</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-header">
+            <span class="skill-icon">📊</span>
+            <h3>数据分析</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag-primary">Pandas</span>
+            <span class="tag tag-primary">NumPy</span>
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">SciPy</span>
+            <span class="tag">statsmodels</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-header">
+            <span class="skill-icon">🤖</span>
+            <h3>机器学习 / 深度学习</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag-accent">PyTorch</span>
+            <span class="tag">XGBoost</span>
+            <span class="tag">LightGBM</span>
+            <span class="tag">HuggingFace</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-header">
+            <span class="skill-icon">⚙️</span>
+            <h3>数据工程</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">Airflow</span>
+            <span class="tag">dbt</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">DuckDB</span>
+            <span class="tag">Docker</span>
+            <span class="tag">GitHub Actions</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-header">
+            <span class="skill-icon">📈</span>
+            <h3>可视化</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag tag-primary">Streamlit</span>
+            <span class="tag tag-primary">Plotly</span>
+            <span class="tag">Matplotlib</span>
+            <span class="tag">Seaborn</span>
+            <span class="tag">Tableau</span>
+            <span class="tag">Power BI</span>
+            <span class="tag">ECharts</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-header">
+            <span class="skill-icon">💰</span>
+            <h3>金融 / 业务</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="tag">TA-Lib</span>
+            <span class="tag">Backtrader</span>
+            <span class="tag">RFM</span>
+            <span class="tag">CLV</span>
+            <span class="tag">Cohort</span>
+            <span class="tag">漏斗分析</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== 代表项目 ============== -->
+    <section id="projects" class="section">
+      <div class="section-header">
+        <span class="section-tag">03</span>
+        <h2>代表性项目</h2>
+        <p class="section-subtitle">端到端工程实现 · 完整文档 · 单元测试 · CI/CD</p>
+      </div>
+
+      <div class="projects-grid">
+        <a href="https://github.com/chanxaviersy/lstm-stock-prediction" target="_blank" rel="noopener" class="project-card" data-color="blue">
+          <div class="project-header">
+            <div class="project-icon">📈</div>
+            <div class="project-status">
+              <span class="status-dot"></span> Public
+            </div>
+          </div>
+          <h3 class="project-title">LSTM 股票市场趋势预测</h3>
+          <p class="project-desc">
+            基于 Attention-LSTM 的时序预测，5 日方向准确率 58%+，含完整回测与夏普比率评估。
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">PyTorch</span>
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">TA-Lib</span>
+            <span class="tech-tag">yfinance</span>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">时序建模</span>
+            <span class="project-tag">量化金融</span>
+            <span class="project-tag">回测</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-link">查看仓库 →</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/chanxaviersy/fall-detection-system" target="_blank" rel="noopener" class="project-card" data-color="red">
+          <div class="project-header">
+            <div class="project-icon">🚨</div>
+            <div class="project-status">
+              <span class="status-dot"></span> Public
+            </div>
+          </div>
+          <h3 class="project-title">人类跌倒行为识别系统</h3>
+          <p class="project-desc">
+            CNN + BiLSTM + Attention 混合架构，99%+ 准确率，专注于降低误报率（FPR ≤ 3%）。
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">PyTorch</span>
+            <span class="tech-tag">Attention</span>
+            <span class="tech-tag">MediaPipe</span>
+            <span class="tech-tag">OpenCV</span>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">行为识别</span>
+            <span class="project-tag">边缘计算</span>
+            <span class="project-tag">IoT</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-link">查看仓库 →</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/chanxaviersy/ecommerce-analytics-dashboard" target="_blank" rel="noopener" class="project-card" data-color="orange">
+          <div class="project-header">
+            <div class="project-icon">🛒</div>
+            <div class="project-status">
+              <span class="status-dot"></span> Public
+            </div>
+          </div>
+          <h3 class="project-title">电商数据分析仪表板</h3>
+          <p class="project-desc">
+            Streamlit + Plotly 交互式仪表板，CLV / 漏斗 / RFM / 品类 GMV 四大模块，多维筛选。
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Streamlit</span>
+            <span class="tech-tag">Plotly</span>
+            <span class="tech-tag">SQLite</span>
+            <span class="tech-tag">Pandas</span>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">业务指标</span>
+            <span class="project-tag">CLV</span>
+            <span class="project-tag">漏斗分析</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-link">查看仓库 →</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/chanxaviersy/financial-reporting-pipeline" target="_blank" rel="noopener" class="project-card" data-color="purple">
+          <div class="project-header">
+            <div class="project-icon">💰</div>
+            <div class="project-status">
+              <span class="status-dot"></span> Public
+            </div>
+          </div>
+          <h3 class="project-title">财务月报自动化管道</h3>
+          <p class="project-desc">
+            多源对账 + 数据治理 + 风险监控 + Excel/HTML 报表，pytest 单元测试覆盖，CI 自动化。
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">openpyxl</span>
+            <span class="tech-tag">pytest</span>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">数据治理</span>
+            <span class="project-tag">ETL</span>
+            <span class="project-tag">自动化</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-link">查看仓库 →</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/chanxaviersy/large-scale-data-cleaning" target="_blank" rel="noopener" class="project-card" data-color="green">
+          <div class="project-header">
+            <div class="project-icon">🧹</div>
+            <div class="project-status">
+              <span class="status-dot"></span> Public
+            </div>
+          </div>
+          <h3 class="project-title">大规模数据清洗管道</h3>
+          <p class="project-desc">
+            千万级行为数据 ETL，多进程并行性能提升 40%+，5 阶段质量保证，benchmark 完整。
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Pandas</span>
+            <span class="tech-tag">NumPy</span>
+            <span class="tech-tag">multiprocessing</span>
+            <span class="tech-tag">SQLite</span>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">千万级数据</span>
+            <span class="project-tag">性能优化</span>
+            <span class="project-tag">质量保障</span>
+          </div>
+          <div class="project-footer">
+            <span class="project-link">查看仓库 →</span>
+          </div>
+        </a>
+
+        <div class="project-card project-card-cta">
+          <div class="cta-content">
+            <h3>还有更多项目想法？</h3>
+            <p>欢迎邮件交流技术细节或合作机会</p>
+            <a href="mailto:chanxaviersy@gmail.com" class="btn btn-primary">📧 联系我</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== 项目亮点 ============== -->
+    <section id="highlights" class="section">
+      <div class="section-header">
+        <span class="section-tag">04</span>
+        <h2>项目亮点</h2>
+      </div>
+
+      <div class="highlights-container">
+        <div class="highlight-block">
+          <div class="highlight-icon">🔬</div>
+          <h3>深度学习项目</h3>
+          <ul class="highlight-list">
+            <li>
+              <strong>LSTM 时序预测</strong>：Attention-LSTM，A 股历史数据 5 日方向预测准确率 58%+，含完整回测与夏普比率评估
+            </li>
+            <li>
+              <strong>跌倒检测</strong>：CNN 空间特征 + BiLSTM 时序 + Attention 关键帧聚焦，99%+ 准确率，覆盖训练 / 推理 / 部署全流程
+            </li>
+          </ul>
+        </div>
+
+        <div class="highlight-block">
+          <div class="highlight-icon">📊</div>
+          <h3>数据分析项目</h3>
+          <ul class="highlight-list">
+            <li>
+              <strong>电商仪表板</strong>：CLV / 漏斗 / RFM / 品类 GMV 四大模块，Streamlit 交互式多维筛选
+            </li>
+            <li>
+              <strong>财务月报</strong>：多源对账 + 风险指标 + Excel 自动生成 + 告警审计，pytest 单元测试覆盖
+            </li>
+            <li>
+              <strong>大规模清洗</strong>：千万级用户行为数据，端到端 ETL，多进程并行，处理时间 -40%
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== 时间线 ============== -->
+    <section class="section">
+      <div class="section-header">
+        <span class="section-tag">05</span>
+        <h2>项目时间线</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2026 · 进行中</div>
+            <h4>📈 LSTM 股票预测</h4>
+            <p>研究专利申请 + 工程化实现</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2025 · 个人项目</div>
+            <h4>🛒 电商仪表板</h4>
+            <p>Streamlit + Plotly 完整业务分析</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2023 - 2024 · Insta360</div>
+            <h4>🧹 大规模数据清洗</h4>
+            <p>千万级数据 ETL · 处理时间 -40%</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2022 - 2023 · 毕业设计</div>
+            <h4>🚨 跌倒检测系统</h4>
+            <p>CNN + LSTM 行为识别 · 99% 准确率</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============== 联系方式 ============== -->
+    <section id="contact" class="section">
+      <div class="section-header">
+        <span class="section-tag">06</span>
+        <h2>联系方式</h2>
+        <p class="section-subtitle">欢迎邮件联系，期待与您交流 🤝</p>
+      </div>
+
+      <div class="contact-grid">
+        <a href="mailto:chanxaviersy@gmail.com" class="contact-card">
+          <div class="contact-icon">📫</div>
+          <div class="contact-label">邮箱</div>
+          <div class="contact-value">chanxaviersy@gmail.com</div>
+        </a>
+
+        <a href="https://github.com/chanxaviersy" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-icon">💻</div>
+          <div class="contact-label">GitHub</div>
+          <div class="contact-value">@chanxaviersy</div>
+        </a>
+
+        <a href="https://linkedin.com/in/chanxaviersy" target="_blank" rel="noopener" class="contact-card">
+          <div class="contact-icon">💼</div>
+          <div class="contact-label">LinkedIn</div>
+          <div class="contact-value">/in/chanxaviersy</div>
+        </a>
+
+        <div class="contact-card">
+          <div class="contact-icon">🌏</div>
+          <div class="contact-label">城市</div>
+          <div class="contact-value">深圳 / 香港</div>
+        </div>
+      </div>
+
+      <div class="cta-box">
+        <h3>如果您对我的项目感兴趣</h3>
+        <p>欢迎邮件联系我，简历 PDF 可邮件索取。期待与您进一步交流！</p>
+        <a href="mailto:chanxaviersy@gmail.com?subject=Resume%20Request" class="btn btn-primary btn-large">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          邮件索取简历
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============== Footer ============== -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="#about">关于</a>
+        <a href="#projects">项目</a>
+        <a href="#skills">技术</a>
+        <a href="#contact">联系</a>
+      </div>
+      <p class="footer-text">
+        📌 最后更新：2026 年 10 月 · 本站由 GitHub Pages 提供服务
+      </p>
+      <p class="footer-text">
+        源代码在 <a href="https://github.com/chanxaviersy/chanxaviersy.github.io">此处</a> · Made with ❤️ by Xavier Chen
+      </p>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <script>
+    // ====== Typing effect ======
+    const phrases = [
+      '数据分析师 📊',
+      'AI 应用开发工程师 🤖',
+      'Python / SQL 开发者 🐍',
+      '开源贡献者 ⭐',
+      '终身学习者 📚'
+    ];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    const typingEl = document.getElementById('typing');
+
+    function type() {
+      const current = phrases[phraseIndex];
+
+      if (isDeleting) {
+        typingEl.textContent = current.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typingEl.textContent = current.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let speed = isDeleting ? 50 : 100;
+
+      if (!isDeleting && charIndex === current.length) {
+        speed = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        speed = 500;
+      }
+
+      setTimeout(type, speed);
+    }
+    type();
+
+    // ====== Stat counter animation ======
+    const statObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.target);
+          const duration = 2000;
+          const start = performance.now();
+
+          function update(now) {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.floor(target * eased);
+
+            if (progress < 1) {
+              requestAnimationFrame(update);
+            } else {
+              el.textContent = target;
+            }
+          }
+          requestAnimationFrame(update);
+          statObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.stat-number').forEach(el => statObserver.observe(el));
+
+    // ====== Back to top button ======
+    const backBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 600) {
+        backBtn.classList.add('visible');
+      } else {
+        backBtn.classList.remove('visible');
+      }
+    });
+    backBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ====== Smooth scroll for nav ======
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          const offset = 80;
+          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // ====== Project card tilt effect ======
+    document.querySelectorAll('.project-card:not(.project-card-cta)').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const rotateX = (y - centerY) / 30;
+        const rotateY = (centerX - x) / 30;
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+      });
+    });
+  </script>
+</body>
+</html>
